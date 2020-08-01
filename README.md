@@ -8,7 +8,7 @@ Youtube:
 
 # Buy me a drink? :)
 
-[Donate](paypal.me/sunnygpt)
+[Donate](https://www.paypal.me/sunnygpt)
 
 # Demo 
 
