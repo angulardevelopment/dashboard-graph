@@ -4,7 +4,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 # Making of
 
-Youtube: https://youtu.be/FP7Hs8lTy1k
+Youtube: 
 
 # Buy me a drink? :)
 
