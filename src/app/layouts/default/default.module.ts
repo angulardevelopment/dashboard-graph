@@ -9,7 +9,7 @@ import { MatSidenavModule, MatDividerModule, MatCardModule, MatPaginatorModule, 
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { DashboardService } from 'src/app/modules/dashboard.service';
 import { DummyComponent } from '../../modules/dummy/dummy.component';
-import { NgxChartsModule } from '@swimlane/ngx-charts';
+
 @NgModule({
   declarations: [
     DefaultComponent,
@@ -26,8 +26,7 @@ import { NgxChartsModule } from '@swimlane/ngx-charts';
     FlexLayoutModule,
     MatCardModule,
     MatPaginatorModule,
-    MatTableModule,
-    NgxChartsModule
+    MatTableModule
   ],
   providers: [
     DashboardService
