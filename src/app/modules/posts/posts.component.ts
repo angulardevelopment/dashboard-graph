@@ -75,4 +75,11 @@ private drawLineAndPath() {
       .attr('d', this.line);
 }
 
+
+
+// d3.selectAll("p").style("color", "blue");
+// you can also manipulate individual nodes as needed:
+// d3.select("body").style("background-color", "black");
+
+
 }
