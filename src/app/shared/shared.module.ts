@@ -1,7 +1,14 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { MatDividerModule, MatToolbarModule, MatIconModule, MatButtonModule, MatMenuModule, MatListModule } from '@angular/material';
-import { FlexLayoutModule } from '@angular/flex-layout';
+// import { MatDividerModule, MatToolbarModule, MatIconModule, MatButtonModule, MatMenuModule, MatListModule } from '@angular/material';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatDividerModule } from '@angular/material/divider';
+import { MatIconModule } from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatListModule } from '@angular/material/list';
+
+// import { FlexLayoutModule } from '@angular/flex-layout';
 import { RouterModule } from '@angular/router';
 
 import { HeaderComponent } from './components/header/header.component';
@@ -29,7 +36,7 @@ import { D3LineChartDirective } from '../modules/posts/test.directive';
     MatToolbarModule,
     MatIconModule,
     MatButtonModule,
-    FlexLayoutModule,
+    // FlexLayoutModule,
     MatMenuModule,
     MatListModule,
     RouterModule,
