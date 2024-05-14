@@ -23,6 +23,10 @@ I'm Sam, and I'm passionate about product engineering and web development. I cre
 Dashboard with graph.
 ![image](https://user-images.githubusercontent.com/4992012/68629236-59dd8b00-04e3-11ea-85f1-cc42419d4949.png)
 
+### useful commands to run project
+- npm run start
+- npm run test
+
 ### External npm Packages used
 -    @angular/material
 -   "@ng-bootstrap/ng-bootstrap": "^13.0.0",
@@ -33,6 +37,7 @@ Dashboard with graph.
 -    "hammerjs": "^2.0.8",
 -    "highcharts": "^7.2.0",
 -    "highcharts-angular": "^2.4.0",
+- jest
 
 ## Subscribe and Stay Updated!
 
