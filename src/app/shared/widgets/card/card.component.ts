@@ -1,11 +1,18 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, NO_ERRORS_SCHEMA } from '@angular/core';
+import { MatIcon } from '@angular/material/icon';
 import * as Highcharts from 'highcharts';
+import { HighchartsChartComponent } from 'highcharts-angular';
 import HC_exporting from 'highcharts/modules/exporting';
+import 'highcharts/modules/exporting';
 
 @Component({
   selector: 'app-widget-card',
   templateUrl: './card.component.html',
-  styleUrls: ['./card.component.scss']
+  styleUrls: ['./card.component.scss'],
+  standalone: true,
+  imports: [HighchartsChartComponent, MatIcon],
+  schemas: [NO_ERRORS_SCHEMA]
+
 })
 export class CardComponent implements OnInit {
 
@@ -74,7 +81,7 @@ export class CardComponent implements OnInit {
       }]
     };
 
-    HC_exporting(Highcharts);
+    // HC_exporting(Highcharts);
 
     setTimeout(() => {
       window.dispatchEvent(

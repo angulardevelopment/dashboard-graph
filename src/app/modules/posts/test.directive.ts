@@ -1,4 +1,4 @@
-import { Directive, ElementRef } from '@angular/core';
+import { Directive, ElementRef, inject } from '@angular/core';
 import * as d3 from 'd3';
 
 @Directive({
@@ -6,8 +6,10 @@ import * as d3 from 'd3';
 })
 
 export class D3LineChartDirective {
+  private el = inject(ElementRef);
 
-  constructor(private el: ElementRef) {
+
+  constructor() {
     this.createLineChart();
     d3.selectAll("p").style("color", "blue");
   }

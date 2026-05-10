@@ -8,7 +8,9 @@ import * as d3Axis from 'd3';
 @Component({
   selector: 'app-posts',
   templateUrl: './posts.component.html',
-  styleUrls: ['./posts.component.scss']
+  styleUrls: ['./posts.component.scss'],
+  standalone: true,
+
 })
 export class PostsComponent implements   OnInit {
   public title = 'Line Chart';

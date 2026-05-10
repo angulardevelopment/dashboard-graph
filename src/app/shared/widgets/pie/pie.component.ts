@@ -1,15 +1,22 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, NO_ERRORS_SCHEMA } from '@angular/core';
 import * as Highcharts from 'highcharts';
-import HC_exporting from 'highcharts/modules/exporting';
+import { HighchartsChartComponent } from 'highcharts-angular';
+import * as HC_exporting from 'highcharts/modules/exporting';
+import 'highcharts/modules/exporting';
 
 @Component({
   selector: 'app-widget-pie',
   templateUrl: './pie.component.html',
-  styleUrls: ['./pie.component.scss']
+  styleUrls: ['./pie.component.scss'],
+  standalone: true,
+  imports: [HighchartsChartComponent],
+  schemas: [NO_ERRORS_SCHEMA]
+
+
 })
 export class PieComponent implements OnInit {
 
-  Highcharts = Highcharts;
+  Highcharts: typeof Highcharts = Highcharts;
   chartOptions = {};
 
   @Input() data = [];
@@ -53,7 +60,7 @@ export class PieComponent implements OnInit {
       }]
     };
 
-    HC_exporting(Highcharts);
+    // HC_exporting(Highcharts);
 
     setTimeout(() => {
       window.dispatchEvent(

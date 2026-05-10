@@ -4,7 +4,9 @@ import { Subject } from 'rxjs';
 @Component({
   selector: 'app-dummy',
   templateUrl: './dummy.component.html',
-  styleUrls: ['./dummy.component.scss']
+  styleUrls: ['./dummy.component.scss'],
+  standalone: true,
+
 })
 export class DummyComponent  {
 }

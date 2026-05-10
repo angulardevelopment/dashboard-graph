@@ -1,8 +1,13 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit, ViewChild, inject } from '@angular/core';
 import { DashboardService } from '../dashboard.service';
 // import { MatTableDataSource, MatPaginator } from '@angular/material';
-import { MatTableDataSource } from '@angular/material/table';
+import { MatTable, MatTableDataSource } from '@angular/material/table';
 import { MatPaginator } from '@angular/material/paginator';
+import { MatDivider } from '@angular/material/divider';
+import { MatCard } from '@angular/material/card';
+import { CardComponent } from 'src/app/shared/widgets/card/card.component';
+import { AreaComponent } from 'src/app/shared/widgets/area/area.component';
+import { PieComponent } from 'src/app/shared/widgets/pie/pie.component';
 
 export interface PeriodicElement {
   name: string;
@@ -36,9 +41,14 @@ const ELEMENT_DATA: PeriodicElement[] = [
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
-  styleUrls: ['./dashboard.component.scss']
+  styleUrls: ['./dashboard.component.scss'],
+  standalone: true,
+  imports: [MatDivider, MatPaginator, MatCard, CardComponent, AreaComponent, MatTable, PieComponent]
+  
 })
 export class DashboardComponent implements OnInit {
+  private dashboardService = inject(DashboardService);
+
 
   bigChart = [];
   cards = [];
@@ -48,8 +58,6 @@ export class DashboardComponent implements OnInit {
   dataSource = new MatTableDataSource<PeriodicElement>(ELEMENT_DATA);
 
   @ViewChild(MatPaginator, { static: true }) paginator: MatPaginator;
-
-  constructor(private dashboardService: DashboardService) { }
 
   ngOnInit() {
     this.bigChart = this.dashboardService.bigChart();

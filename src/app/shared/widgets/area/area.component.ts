@@ -1,19 +1,26 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, NO_ERRORS_SCHEMA } from '@angular/core';
+import { HighchartsChartComponent } from 'highcharts-angular';
+import 'highcharts/modules/exporting';
 import * as Highcharts from 'highcharts';
-import HC_exporting from 'highcharts/modules/exporting';
-
 
 @Component({
   selector: 'app-widget-area',
   templateUrl: './area.component.html',
-  styleUrls: ['./area.component.scss']
+  styleUrls: ['./area.component.scss'],
+  standalone: true,
+  imports: [HighchartsChartComponent,],
+  schemas: [NO_ERRORS_SCHEMA]
+
+
 })
 export class AreaComponent implements OnInit {
 
   chartOptions: {};
   @Input() data: any = [];
 
-  Highcharts = Highcharts;
+
+    Highcharts: typeof Highcharts = Highcharts; // Required property
+
 
   constructor() { }
 
@@ -41,7 +48,7 @@ export class AreaComponent implements OnInit {
       series: this.data
     };
 
-    HC_exporting(Highcharts);
+    // Exporting(Highcharts);
 
     setTimeout(() => {
       window.dispatchEvent(
